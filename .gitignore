@@ -17,3 +17,7 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+.db_data
+/docker/logs/
+.seeded
+docker-compose.yml
