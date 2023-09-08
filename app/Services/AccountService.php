@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Services;
 
+use App\DTO\Accounts\CreateAccountDTO;
 use App\Models\Account;
 use App\Repository\AccountRepositoryInterface;
 
@@ -25,5 +26,10 @@ class AccountService
         }
 
         return $account;
+    }
+
+    public function create(CreateAccountDTO $dto): Account
+    {
+        return $this->accountRepository->create($dto);
     }
 }

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Repository;
 
+use App\DTO\AbstractInterfaceDTO;
 use App\Models\Account;
 
 class AccountRepository extends AbstractRepository implements AccountRepositoryInterface
@@ -13,5 +14,10 @@ class AccountRepository extends AbstractRepository implements AccountRepositoryI
     public function findByNumber(int $number): Account|null
     {
         return self::loadModel()::where('number', $number)->first();
+    }
+
+    public static function create(AbstractInterfaceDTO $dto): Account
+    {
+        return parent::create($dto);
     }
 }
