@@ -6,9 +6,13 @@ mkdir -p /var/www
 
 rm /var/www/var/*.db || true
 
-cp .env.example .env
+if [ ! -f /var/www/.env ]; then
+    cp .env.example .env
+fi
 
-cp docker-compose.yml.sample docker-compose.yml
+if [ ! -f /var/www/docker-compose.yml ]; then
+    cp docker-compose.yml.sample docker-compose.yml
+fi
 
 composer i -o
 
