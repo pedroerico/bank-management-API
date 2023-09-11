@@ -13,6 +13,13 @@ O projecto está configurado por padrão para rodar com docker
 
 ## Execução
 execute o comando na pasta local
+
+Para criar o docker-compose.yml
+```bash
+cp docker-compose.yml.sample docker-compose.yml
+```
+
+Para rodar o docker
 ```bash
 docker-compose up -d
 ```

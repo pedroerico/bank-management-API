@@ -10,10 +10,6 @@ if [ ! -f /var/www/.env ]; then
     cp .env.example .env
 fi
 
-if [ ! -f /var/www/docker-compose.yml ]; then
-    cp docker-compose.yml.sample docker-compose.yml
-fi
-
 composer i -o
 
 php /var/www/artisan migrate
