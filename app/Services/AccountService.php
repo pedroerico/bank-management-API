@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Services;
 
 use App\DTO\Accounts\CreateAccountDTO;
+use App\Exceptions\AccountException;
 use App\Models\Account;
 use App\Repository\AccountRepositoryInterface;
 
@@ -22,7 +23,7 @@ class AccountService
     {
         $account = $this->accountRepository->findByNumber($id);
         if (!$account) {
-            throw new \Exception('Conta não encontrada.');
+            throw new AccountException('Conta não encontrada.');
         }
 
         return $account;
