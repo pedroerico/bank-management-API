@@ -19,14 +19,7 @@ class TransactionController extends Controller
 
     public function create(CreateTransactionRequest $request): Response
     {
-        try {
-            $transaction = $this->transactionService->create(RequestTransactionDTO::makeFromRequest($request));
-            return response(new AccountResource($transaction->account), Response::HTTP_CREATED);
-        } catch (\Exception $e) {
-            return response()->json(
-                ['error' => 'Erro ao criar transação: ' . $e->getMessage()],
-                Response::HTTP_NOT_FOUND
-            );
-        }
+        $transaction = $this->transactionService->create(RequestTransactionDTO::makeFromRequest($request));
+        return response(new AccountResource($transaction->account), Response::HTTP_CREATED);
     }
 }
