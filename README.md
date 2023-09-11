@@ -17,8 +17,12 @@ execute o comando na pasta local
 docker-compose up -d
 ```
 
-## Commando PHPUnit
-Até o atual momento não foi commitado os testes de unidade.
+## Commando Laravel Test
+
+Comando para executar os tests, ou pode entrar no container e executar por dentro:
+```bash
+docker-compose exec php php artisan test
+```
 
 ## Documentação
 
