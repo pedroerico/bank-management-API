@@ -1,5 +1,3 @@
-<p align="center"><a href="https://www.objective.com.br/" target="_blank"><img src="https://www.objective.com.br/wp-content/uploads/2022/08/obj-thumb.png" width="400" alt="Laravel Logo"></a></p>
-
 # API
 
 Foi desenvolvida uma API de gestão bancária utilizando o Laravel 10 e PHP 8.2, seguindo as melhores práticas e utilizando alguns design patterns.
